@@ -1,3 +1,4 @@
+'use client'
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -7,27 +8,21 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
 
-import { link as linkStyles } from "@nextui-org/theme";
+// import { link as linkStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
-import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-  TwitterIcon,
   GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
   SearchIcon,
 } from "@/components/icons";
 
-import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
   const searchInput = (
@@ -51,6 +46,10 @@ export const Navbar = () => {
     />
   );
 
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -66,20 +65,29 @@ export const Navbar = () => {
         justify="end"
       >
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))}
+          <li className="text-foreground">
+            <button onClick={scrollToTop}>Home</button>
+          </li>
+          <li>
+            <Link href="#aboutMe" className='text-white'>
+              <button>About Me</button>
+            </Link>
+          </li>
+          <li>
+            <Link href="#portfolio" className='text-white'>
+              <button>Portfolio</button>
+            </Link>
+          </li>
+          <li>
+            <Link href="#credits" className='text-white'>
+              <button>Credits</button>
+            </Link>
+          </li>
+          <li>
+            <Link href="#contact" className='text-white'>
+              <button>Contact</button>
+            </Link>
+          </li>
         </ul>
       </NavbarContent>
 

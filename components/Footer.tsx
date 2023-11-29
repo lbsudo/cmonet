@@ -1,17 +1,39 @@
+"use client"
 import React from 'react'
 import { Link } from "@nextui-org/react";
 type Props = {}
 
 export default function Footer({ }: Props) {
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
   return (
     <>
       <footer className="w-full flex flex-col items-center justify-center py-3 bg-primary text-background">
-        <ul className='flex items-center justify-center space-x-4'>
-          <li>Home</li>
-          <li>About</li>
-          <li>Portfolio</li>
-          <li>Credits</li>
-          <li>Contact</li>
+        <ul className='flex items-center justify-center space-x-4 '>
+          <li>
+            <button onClick={scrollToTop}>Home</button>
+          </li>
+          <li>
+            <Link href="#aboutMe" className='text-black'>
+              <button>About Me</button>
+            </Link>
+          </li>
+          <li>
+            <Link href="#portfolio" className='text-black'>
+              <button>Portfolio</button>
+            </Link>
+          </li>
+          <li>
+            <Link href="#credits" className='text-black'>
+              <button>Credits</button>
+            </Link>
+          </li>
+          <li>
+            <Link href="#contact" className='text-black'>
+              <button>Contact</button>
+            </Link>
+          </li>
         </ul>
         <h2 className='uppercase text-3xl'>
           Charyse Monet
