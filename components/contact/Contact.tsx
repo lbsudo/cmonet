@@ -15,8 +15,8 @@ export default function Contact({ }: Props) {
         </div>
         <div className='flex flex-col lg:flex-row pt-3 items-center justify-center w-full lg:justify-start lg:items-start'>
           <div className='w-full lg:w-1/2 flex flex-col lg:items-start lg:justify-start justify-center items-center'>
-            <h3 className='text-4xl text-primary pb-6'>Let's Work</h3>
-            <p className='pb-2 text-center lg:text-left'>I'm looking for new castings and projects. Reach out and let's see if we can work together to make fantastic film, art, and music </p>
+            <h3 className='text-4xl text-primary pb-6'>Let&apos;s Work</h3>
+            <p className='pb-2 text-center lg:text-left'>I&apos;m looking for new castings and projects. Reach out and let&apos;s see if we can work together to make fantastic film, art, and music </p>
             <p className='font-bold'>Represented By:</p>
             <p>Platinum Star Media Group(CA)</p>
             <p>(323) 853-9035</p>
