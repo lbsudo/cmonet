@@ -66,7 +66,7 @@ dependencies:
     specifier: 14.0.2
     version: 14.0.2(eslint@8.48.0)(typescript@5.0.4)
   framer-motion:
-    specifier: ^10.16.4
+    specifier: ^10.16.5
     version: 10.16.5(react-dom@18.2.0)(react@18.2.0)
   intl-messageformat:
     specifier: ^10.5.0
@@ -89,6 +89,9 @@ dependencies:
   react-icons:
     specifier: ^4.12.0
     version: 4.12.0(react@18.2.0)
+  react-intersection-observer:
+    specifier: ^9.5.3
+    version: 9.5.3(react@18.2.0)
   tailwind-variants:
     specifier: ^0.1.18
     version: 0.1.18(tailwindcss@3.3.5)
@@ -4544,6 +4547,14 @@ packages:
     resolution: {integrity: sha512-IBaDuHiShdZqmfc/TwHu6+d6k2ltNCf3AszxNmjJc1KUfXdEeRJOKyNvLmAHaarhzGmTSVygNdyu8/opXv2gaw==}
     peerDependencies:
       react: '*'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /react-intersection-observer@9.5.3(react@18.2.0):
+    resolution: {integrity: sha512-NJzagSdUPS5rPhaLsHXYeJbsvdpbJwL6yCHtMk91hc0ufQ2BnXis+0QQ9NBh6n9n+Q3OyjR6OQLShYbaNBkThQ==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.2.0
     dev: false

@@ -14,12 +14,11 @@ import { Input } from "@nextui-org/input";
 
 // import { link as linkStyles } from "@nextui-org/theme";
 
-import { siteConfig } from "@/config/site";
+// import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-  GithubIcon,
   SearchIcon,
 } from "@/components/icons";
 
@@ -65,7 +64,7 @@ export const Navbar = () => {
         justify="end"
       >
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          <li className="text-foreground">
+          <li className="text-white">
             <button onClick={scrollToTop}>Home</button>
           </li>
           <li>
@@ -90,37 +89,6 @@ export const Navbar = () => {
           </li>
         </ul>
       </NavbarContent>
-
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github} aria-label="Github">
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>
-
-      <NavbarMenu>
-        {searchInput}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
-      </NavbarMenu>
     </NextUINavbar>
   );
 };
